@@ -20,10 +20,63 @@ body {
   header {
     background: linear-gradient(to right, #ff6060, rgb(255, 255, 0));
     grid-area: header;
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &:hover {
+        transform: rotatex(360deg);
+        transition: 2s;
+      }
+      .header__image {
+        display: inline-block;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        width: 6rem;
+      }
+    }
+    .desktop__nav {
+      display: none;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-bottom: 0.3rem;
+      &:hover {
+        color: #ff0000;
+      }
+      a {
+        text-decoration: none;
+        color: rgb(66, 64, 64);
+      }
+    }
   }
   section {
     background-color: lightgray;
     grid-area: section;
+    background-image: url(../imagenes/pizzalunaportada.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 540px;
+    .header__nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      a {
+        display: inline-block;
+        margin-top: 1.5rem;
+        text-decoration: none;
+        color: black;
+        &:hover {
+          color: #ff0000;
+        }
+      }
+    }
+    .hero__text {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-top: 3rem;
+    }
   }
   footer {
     background-color: white;
