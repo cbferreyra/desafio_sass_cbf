@@ -47,6 +47,20 @@ body header .desktop__nav a {
   text-decoration: none;
   color: rgb(66, 64, 64);
 }
+@media (min-width: 768px) {
+  body header .desktop__nav a {
+    text-decoration: none;
+    color: black;
+  }
+}
+@media (min-width: 768px) {
+  body header .desktop__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 0.3rem;
+  }
+}
 body section {
   background-color: lightgray;
   grid-area: section;
@@ -70,13 +84,24 @@ body section .header__nav a {
 body section .header__nav a:hover {
   color: #ff0000;
 }
+@media (min-width: 768px) {
+  body section .header__nav {
+    display: none;
+  }
+}
 body section .hero__text {
   text-align: center;
   font-size: 2.4rem;
   margin-top: 3rem;
 }
+@media (min-width: 768px) {
+  body section .hero__text {
+    font-size: 4rem;
+    margin-top: 10rem;
+  }
+}
 body footer {
-  background-color: white;
+  background-color: #ff0000;
   grid-area: footer;
 }
 body footer .footer__content {

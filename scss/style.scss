@@ -1,8 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "general";
+@import "variables";
+
 body {
   display: grid;
   grid-template-rows: 10% auto auto;
@@ -16,94 +14,7 @@ body {
   img {
     max-width: 100%;
   }
-
-  header {
-    background: linear-gradient(to right, #ff6060, rgb(255, 255, 0));
-    grid-area: header;
-    .logo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      &:hover {
-        transform: rotatex(360deg);
-        transition: 2s;
-      }
-      .header__image {
-        display: inline-block;
-        margin-top: 1.5rem;
-        margin-bottom: 1rem;
-        width: 6rem;
-      }
-    }
-    .desktop__nav {
-      display: none;
-      flex-direction: row;
-      justify-content: space-around;
-      margin-bottom: 0.3rem;
-      &:hover {
-        color: #ff0000;
-      }
-      a {
-        text-decoration: none;
-        color: rgb(66, 64, 64);
-      }
-    }
-  }
-  section {
-    background-color: lightgray;
-    grid-area: section;
-    background-image: url(../imagenes/pizzalunaportada.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 540px;
-    .header__nav {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      a {
-        display: inline-block;
-        margin-top: 1.5rem;
-        text-decoration: none;
-        color: black;
-        &:hover {
-          color: #ff0000;
-        }
-      }
-    }
-    .hero__text {
-      text-align: center;
-      font-size: 2.4rem;
-      margin-top: 3rem;
-    }
-  }
-  footer {
-    background-color: white;
-    grid-area: footer;
-    .footer__content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      .footer__text {
-        margin: 1rem;
-      }
-    }
-    .footer__credits {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      img {
-        margin-top: 0.5rem;
-        margin-bottom: 1rem;
-        display: inline;
-        width: 3rem;
-        text-align: center;
-      }
-      p {
-        font-size: 0.6rem;
-        margin-bottom: 2rem;
-      }
-    }
-  }
+  @import "header";
+  @import "section";
+  @import "footer";
 }
